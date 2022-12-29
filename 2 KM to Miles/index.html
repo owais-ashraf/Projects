@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miles to KMs</title>
+</head>
+    <style>
+        body{
+            background-color: rgb(2, 68, 52);
+        }
+        h1{
+            color : rgb(182, 18, 18);
+            text-align: center;
+            padding : 30px 20px;
+        }
+        #container{
+            background-color: aquamarine;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 200px 200px;
+    
+        }
+        .input-div{
+            display: inline-block;
+            text-align: center;
+            
+        }
+        .in{
+            text-align: center;
+        }
+    </style>
+<body>
+    <h1>Length Conversion</h1>
+    <div id="container">
+        <div class="input-div">
+            <input type="number" id="Miles" value="0" class="in">
+            <label>Miles</label>
+        </div>
+
+        <div class="input-div">
+            <input type="number" id="KM" value="0" class="in">
+            <label>KMs</label>
+        </div>
+
+        <div class="input-div">
+            <input type="number" id="Foot" value="0" class="in"> 
+            <label>Foot</label>
+        </div>
+
+        <div class="input-div">
+            <input type="number" id="Inch" value="0" class="in"> 
+            <label>Inch</label>
+        </div>
+
+    </div>
+    <script>
+        
+        let miles = document.getElementById("Miles")
+        miles.addEventListener("input", function(){
+            let m = this.value
+            let k = (m * 1.609344)
+            let f = (m * 5280)
+            let i = (m * 63360)
+            kilo.value = k;
+            foot.value = f;
+            inch.value = i;
+        })
+
+        let kilo = document.getElementById("KM")
+        kilo.addEventListener("input", function(){
+            console.log("heo")
+        })    
+
+        let foot = document.getElementById("Foot")
+        foot.addEventListener("input", function(){
+            console.log("Hello")
+        })
+
+        let inch = document.getElementById("Inch")
+        inch.addEventListener("input", function(){
+            console.log("Hello")
+        })
+
+
+
+    </script>
+</body>
+
+</html>

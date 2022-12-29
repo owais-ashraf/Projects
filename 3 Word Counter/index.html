@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Grotesk';
+            src: url(HKGrotesk-Medium.otf);
+        }
+        h1{
+            text-align: center;
+            background-color: rgb(233, 181, 37);
+            padding: 20px;
+            margin: 0%;
+            font-family: 'Grotesk', sans-serif;
+        }
+        
+        #textbox{
+                width: 99%;
+                border-color: rgb(233, 181, 37);
+                position: relative;            
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+            background-color: rgb(233, 181, 37) ;
+            margin: 0%;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        span{
+            color: blue;
+            font-family: 'Canterbury', sens-serif;
+            font-weight: bold;
+            font-size: 45px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Word and Character Counter</h1>
+    <textarea id="textbox" cols="30" rows="10"></textarea>
+    <p>
+        <span id="word">0</span> Words and
+        <span id="char">0</span> Character
+    </p>
+    <script>
+        let textbox = document.getElementById('textbox');
+        textbox.addEventListener('input', function(){
+            let text = this.value;
+            document.getElementById('char').innerHTML = text.length;
+            
+            text = text.trim() //remove extra space from start and end.
+            let word = text.split(" ");
+            document.getElementById('word').innerHTML = word.length
+
+
+        })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky NavBar</title>
+</head>
+    <style>
+        body{
+            padding: 20px;
+        }
+        #menu-bar{
+            text-align: center;
+            background-color: rgb(162, 252, 88);
+        }
+        #menu-bar li{
+            display: inline-block;
+            padding: 5px 65px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+        #header{
+            text-align: center;
+            width: 100%;
+            height: 50%;
+        }
+        #logo{
+            width: 250px;
+            height: auto;
+        }
+        .sticky{
+            position: fixed;
+            top: 0%;
+            width: 100%;
+        }
+        .box{
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 3px solid grey;
+        }
+        #all{
+            text-align: right;
+            
+        }
+        #white{
+            background-color: antiquewhite;
+        }
+        #brown{
+            background-color: brown;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+<body>
+
+    <div id="all">
+        <span class="box" id="White" onclick="colorBG('#faebd7')"></span>
+        <span class="box" id="brown" onclick="colorBG('#A52A2A')"></span>
+        <span class="box" id="aqua" onclick="colorBG('#00FFFF')"></span>
+        <span class="box" id="black" onclick="colorBG('#000000')"></span>
+    </div>
+    <div id="header">
+        <img src="https://www.logodesign.net/images/nature-logo.png" id="logo" alt="">
+    </div>
+    <nav id="menu-bar">
+        <li>Home</li>
+        <li>Our Team</li>
+        <li>Projects</li>
+        <li>Client</li>
+        <li>Contact us</li>
+    </nav>
+    <h1 class='text'>About us</h1>
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis earum ullam, vitae debitis reprehenderit soluta itaque dignissimos voluptatum beatae! Vel facilis inventore debitis cum porro totam? Expedita, ipsam quam. Consequatur necessitatibus facilis id reiciendis architecto ut! Beatae incidunt sapiente, veniam ab excepturi culpa doloribus reprehenderit saepe accusantium vel eum quidem aperiam ducimus temporibus officiis, nulla exercitationem nihil porro facere ullam consectetur voluptates totam. Perspiciatis odio, hic expedita, voluptatem exercitationem excepturi ut error culpa debitis modi et vitae minima dolores animi laudantium inventore blanditiis ad officia praesentium. Necessitatibus sequi dicta voluptate nostrum ullam eveniet quo blanditiis dignissimos asperiores laboriosam aspernatur eius earum, odit est minus ad dolor iure officiis vel soluta magni eum. Ab accusamus in tempore! Et vero officia doloremque distinctio possimus eaque dolores sed quisquam ad porro. Repellendus dolor accusamus rem esse aliquam distinctio expedita, dolorem ex voluptatibus? Obcaecati, dignissimos unde! Beatae, quod, est ipsa laudantium minima eaque enim debitis reiciendis in quia fugit quasi dolor amet, nemo deleniti quo. Quo, optio assumenda totam amet minima quia debitis placeat quos, necessitatibus earum voluptate asperiores, ex distinctio est? Mollitia quaerat explicabo pariatur temporibus inventore ratione error voluptatem illum tempore beatae illo, consequuntur eos officiis impedit sed saepe ducimus. Ipsa doloribus minus ipsum consectetur nobis voluptatibus qui debitis quia rem repellendus libero, temporibus aliquid, iusto velit. Ipsum, officia recusandae. Enim rem libero ducimus voluptas consectetur! Sint sunt, cumque ipsam fugit ipsum quisquam nostrum fuga dignissimos praesentium dicta nemo? A voluptate in aperiam culpa eligendi harum suscipit placeat accusantium, doloribus doloremque amet enim, nam mollitia dolorem. Maxime id enim nemo voluptate, necessitatibus nostrum facere, explicabo commodi ab dolor soluta laudantium dolore, rem hic est reprehenderit. Magni, optio cupiditate labore sit itaque et quos natus porro quis aperiam atque ab iusto dolorum corporis dolores, perspiciatis incidunt voluptatibus odio. Illum necessitatibus perspiciatis consectetur possimus ipsa consequuntur aliquid impedit nam? Ullam sequi eum id ea possimus modi cumque praesentium nesciunt voluptas voluptates, earum provident distinctio exercitationem dignissimos consequatur placeat autem, laudantium inventore. Soluta quisquam animi a commodi natus quidem explicabo, fuga voluptate alias pariatur quibusdam ratione deserunt vero dicta atque, est ut labore, autem cum officiis! Delectus magnam ab accusantium excepturi magni quibusdam reiciendis tempore mollitia. Exercitationem, esse. Hic ullam, odio soluta iste voluptates asperiores rerum numquam iusto eligendi. Distinctio, cum? Quis officiis quidem cum repudiandae, laboriosam asperiores commodi quisquam cumque! Quos enim recusandae magnam blanditiis aspernatur deserunt laudantium minus pariatur ducimus explicabo optio eveniet quidem reiciendis cumque autem rem obcaecati, cum rerum eligendi temporibus quis ut ipsum est! Eaque, iusto provident odit voluptates qui suscipit. Ipsam ea dolorem labore nemo impedit molestias, eaque itaque tempora earum adipisci quis quae nobis! Consequatur magni rerum repellat dolorum obcaecati velit nam esse cupiditate tempora non vitae perferendis quam iusto aliquid architecto recusandae eaque qui ea, facere reprehenderit. Animi labore amet vero ad, quas minima voluptatibus! Hic fugiat rem beatae voluptatum laudantium nisi sed dicta nam! Aut a numquam repudiandae nobis sunt quibusdam placeat harum vitae! Itaque quaerat distinctio unde molestiae, hic vel aperiam soluta quas quo?
+    </p>
+    <script>
+        let menuBar = document.getElementById("menu-bar");
+        window.addEventListener('scroll', function(){
+
+            if(window.pageYOffset >= 190){
+                menuBar.classList.add('sticky')
+            }else{
+                menuBar.classList.remove('sticky')
+            }
+        })
+        
+        function colorBG(color){
+         document.body.style.backgroundColor = color;
+         let txt = document.getElementsByClassName('text');
+         if(color == '#000000'){
+            for(let elm of txt){
+                elm.style.color = 'white';
+            }
+        }else{
+            for(let elm of txt){
+                elm.style.color = '';
+            }
+        }
+    }
+    </script>
+</body>
+</html>
